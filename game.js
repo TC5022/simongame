@@ -13,6 +13,15 @@ $(document).keypress(function() {
   }
 })
 
+$(document).click(function() {
+  if (!started) {
+    $("#level-title").text("Level " + level)
+    newSequence();
+    started = true;
+  }
+}
+)
+
 //To detect which button has been clicked by user
 $(".btn").click(function() {
   var userChosenColor = this.id;
